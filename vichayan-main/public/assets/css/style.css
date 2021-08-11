@@ -1,0 +1,398 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+    height: 100vw;
+} 
+/* ------popup------ */
+
+.login-popup{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1099;
+	background-color:rgba(0,0,0,0.6);
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s ease;
+}
+.login-popup.show{
+	visibility:visible;
+	opacity: 1;
+}
+.login-popup .box{
+	background-color:#ffffff;
+	width: 750px;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	display: flex;
+	flex-wrap: wrap;
+	opacity: 0;
+	margin-left: 50px;
+	transition: all 1s ease;
+
+}
+.login-popup.show .box{
+	opacity: 1;
+	margin-left: 0;
+}
+.login-popup .box .img-area{
+	flex:0 0 50%;
+	max-width: 50%;
+	position: relative;
+	overflow: hidden;
+	padding:30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.login-popup .box .img-area h1{
+	font-size: 30px;
+    margin-top: 370px;
+}
+.login-popup .box .img-area .img{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-image: url('/assets/images/b.png');
+	background-size: cover;
+	background-position: center;
+	animation: zoomInOut 7s linear infinite;
+	z-index: -1;
+}
+.login-popup .box .form .close{
+	position: absolute;
+	right: 10px;
+	top:0px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+@keyframes zoomInOut{
+	0%,100%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.1);
+	}
+}
+.login-popup .box .form{
+	flex:0 0 50%;
+	max-width: 50%;
+	padding:40px 30px;
+}
+
+.login-popup .box .form h1{
+	color:#000000;
+	font-size: 30px;
+	margin:0 0 30px;
+}
+.login-popup .box .form .form-control{
+	height: 45px;
+	margin-bottom: 30px;
+	width: 100%;
+	border:none;
+	border-bottom:1px solid #cccccc;
+	font-size: 15px;
+	color:#000000;
+}
+.login-popup .box .form .form-control:focus{
+	outline: none;
+}
+.login-popup .box .form label{
+	font-size: 15px;
+	color:#555555;
+}
+.login-popup .box .form .btn{
+	width: 100%;
+	background-color: #E91E63;
+	margin-top:40px;
+	height: 45px;
+	border:none;
+	border-radius: 25px;
+	font-size: 15px;
+	text-transform: uppercase;
+	color:#ffffff;
+	cursor: pointer;
+}
+.login-popup .box .form .btn:focus{
+	outline: none;
+}
+
+
+/* ------ navbar ------ */
+
+.navbar{
+    background-color:	#B0F7E8;
+}
+/* .navbar .nav-link{
+    color: white;
+} */
+.navbar-nav{
+    padding-right: 20px;  
+}
+.navbar-nav button{
+    color: white;
+    font-weight: 900;
+    font-size: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navbar-nav button:hover{
+    color: rgb(107, 90, 86);
+}
+/*------ end of navbar ------*/
+
+/*------ header ------*/
+
+.header .p1{
+    margin-bottom: 110px;
+}
+.header img{
+    padding-left: 32px;
+    width: 38%;
+    height: 38%;
+}
+/* .hh1{
+    background-color: thistle;
+} */
+.hh2{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(253, 236, 249);
+}
+.hh2 img{
+   width: 602px;
+   height: 300px;
+}
+.hh2 h1{
+    font-size: 63px;
+    color: rgb(119, 108, 110);
+    padding-right: 280px;
+    margin-top: -58px;
+}
+.bbj{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 310px;
+}
+.bbj button{
+    margin-top: 60px;
+    font-size: 23px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white;
+    background-color: rgb(84, 139, 139);
+    border-radius: 13px;
+}
+
+/*------ end of header ------*/
+
+/*------ body section ------*/
+
+.c1{ 
+    text-align: center;
+    font-size: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.c1 h1{
+    font-size: 60px;
+}
+.c1 button{
+    color: white;
+    background-color: thistle;
+    font-size: 30px;
+    border-radius: 15px;
+}
+.c2,.c3{
+    background-color: rgb(226, 242, 248);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.c2 h1{
+    color: rgb(119, 108, 110);
+    font-size: 65px;
+    padding-left: 75px;
+}
+.c3 h1{
+    text-align: center;
+    color: rgb(119, 108, 110);
+    font-size: 65px;
+}
+.c3{
+    padding-bottom: 70px;
+}
+.c3 img{
+    padding-left: 20px;
+}
+
+/*------ end of body section ------*/
+
+/*------ footer ------*/
+
+.ufooter{
+    background-color: #e4cad2;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+}
+ul{
+      list-style-type: none;
+  }
+   li a{
+      color:black ;
+      border-bottom: none;
+  } 
+  li a:hover{
+      color: rgb(83, 7, 7);
+      border-bottom: none;
+  }
+.copyright{
+    background-color: rgb(226, 242, 248);
+    text-align: center;
+}
+
+/*------ end of footer ------*/
+
+/*------------------ media query ------------------*/
+
+@media screen and (max-width: 768px) {
+/* ------popup------ */
+
+.login-popup .box{
+		width: calc(100% - 30px);
+	}
+	.login-popup .box .img-area{
+		display: none;
+	}
+	.login-popup .box .form{
+		flex: 0 0 100%;
+        max-width: 100%;
+	}
+
+/* ------ navbar ------ */
+
+.navbar img{
+    max-width: 130px;
+    max-height: 43px;
+}
+.navbar button{
+    font-size: 18px;
+}
+.navbar .button1{
+    padding: -30px;
+}
+
+/* ------ Header ------ */
+
+.hh1 img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding-right: 10px;
+}
+ .hh2{
+    text-align: center;
+    display: block;
+}
+.hh2 img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding-right: 10px;
+}
+.hh2 h1{
+    margin-top: -70px;
+    padding-left: 5%;
+    font-size: 32px;
+    padding-right: 5%;
+}
+
+/* bbj used for 2 buttons in header section */
+.bbj{
+    margin-top: -35px;
+    padding-bottom: 35px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.bbj button{
+    font-size: 15px;
+}
+
+/* ------ Body Section ------ */
+.c1{
+    margin-bottom: -1px;
+}
+.c1 h1{
+    font-size: 30px;
+}
+.c1 button{
+    font-size: 18px;
+    margin-top: -25px;
+    margin-right: 5px;
+}
+.c2{
+    flex-direction: column-reverse;
+}
+.c3{
+    display: block;
+}
+.c2 h1{
+    text-align: center;
+    font-size: 40px;
+    padding-left: 6px;
+    padding-bottom: 30px;
+}
+.c2 img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+.c3 img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+} 
+.c3 h1{
+    text-align: center;
+    font-size: 40px;
+    padding-left: 10px;
+    padding-top: 30px;
+    margin-bottom: -20px;
+}
+
+/* ------ Footer ------ */
+
+.ufooter {
+    display: block;
+    text-align: center;
+}
+.ufooter .text{
+    padding-left: 30px;
+}
+.ufooter img{
+    padding-left: 26px;
+    margin-top: -60px;
+    margin-bottom: -30px;
+    width: 100%;
+    height: 100%;
+} 
+.copyright{
+    padding: 10px;
+}
+}
